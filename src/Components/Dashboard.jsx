@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     return (
         <>
-            <span>User is currently: {isLoggedIn ? 'Logged-In' : 'Logged-Out'}. </span>
+            <span>User is currently: {isLoggedIn ? 'Logged-In' : 'Logged-Out'}. </span> <br />
             {isLoggedIn ? (<span>User name: {authUser.Name}</span>) : null}
             <br/>
             {isLoggedIn

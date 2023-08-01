@@ -2,15 +2,30 @@ import React, { useState, useEffect, useContext, createContext } from 'react';
 
 const AuthContext = createContext();
 
-export function useAuth(){
+export function useAuth() {
     return useContext(AuthContext);
 }
 
-export function AuthProvider(props){
+export function AuthProvider(props) {
     const [authUser, setAuthUser] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const value =  {
+    // useEffect(() => {
+    //     // subscribe to auth service
+    //     const subscribe = AuthProvider.subscribe((user) => {
+    //         if (user) {
+    //             setIsLoggedIn(true);
+    //             setAuthUser(user);
+    //         } else{
+    //             setIsLoggedIn(false)
+    //             setAuthUser(null)
+    //         }
+    //     })
+
+    //     return subscribe;
+    // }, []);
+
+    const value = {
         authUser,
         setAuthUser,
         isLoggedIn,
